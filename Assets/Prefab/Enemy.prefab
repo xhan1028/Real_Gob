@@ -107,6 +107,9 @@ MonoBehaviour:
   animCon:
   - {fileID: 9100000, guid: 7a3505d77ab2a6e49a5fc53ceff8d179, type: 2}
   - {fileID: 9100000, guid: 3c2965f448ac3344abd26ab290d864e7, type: 2}
+  - {fileID: 9100000, guid: ee7f8565c9deb6c47a4137450dc44a47, type: 2}
+  - {fileID: 9100000, guid: dc0ae4434dbcc0f4896f4a9916ce8b36, type: 2}
+  - {fileID: 9100000, guid: 38ab4320b0744c74b97f5b0b098758f9, type: 2}
   target: {fileID: 0}
 --- !u!70 &3075538712165888819
 CapsuleCollider2D:
