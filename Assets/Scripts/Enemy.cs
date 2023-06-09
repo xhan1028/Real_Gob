@@ -69,6 +69,8 @@ public class Enemy : MonoBehaviour
         }
         else
         {
+            GameManager.instance.kill++;
+            GameManager.instance.GetExp();
             Dead();
         }
     }
