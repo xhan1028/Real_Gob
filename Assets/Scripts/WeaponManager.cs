@@ -15,14 +15,8 @@ public class WeaponManager : MonoBehaviour
 
    void Awake()
    {
-		  chr_move = GetComponentInParent<Chr_Move>();
+		  chr_move = GameManager.instance.chr_move;
    }
-
-   void Start()
-   {
-		  Init();
-   }
-
    void Update()
    {
 		switch (id)
@@ -55,8 +49,25 @@ public class WeaponManager : MonoBehaviour
 			 zizeung();
    }
 
-   public void Init()
+   public void Init(ItemData data)
    {
+		name = "Weapon " + data.itemId;
+		transform.parent = chr_move.transform;
+		transform.localPosition = Vector3.zero;
+
+		id = data.itemId;
+		damage = data.baseDamage;
+		count = data.baseCount;
+
+		for (int index=0; index < GameManager.instance.pool.prefabs.Length; index++)
+		{
+			if (data.projectile == GameManager.instance.pool.prefabs[index])
+			{
+				prefabId = index;
+				break;
+			}
+		}
+
 		switch (id)
 		{
 			case 0:
