@@ -13,6 +13,8 @@ public class Items : MonoBehaviour
 
     Image Icon;
     TextMeshProUGUI textLevel;
+    TextMeshProUGUI textName;
+    TextMeshProUGUI textOption;
 
     void Awake()
     {
@@ -21,12 +23,30 @@ public class Items : MonoBehaviour
 
         TextMeshProUGUI[] texts = GetComponentsInChildren<TextMeshProUGUI>();
         textLevel = texts[0];
+        textName = texts[1];
+        textOption = texts[2];
+        textName.text = data.itemName;
     }
 
-    void LateUpdate()
+    void OnEnable()
     {
         textLevel.text = "Lv." + (level + 1);
-    }
+
+        switch (data.itemType)
+        {
+            case ItemData.ItemType.Sword:
+            case ItemData.ItemType.Gun:
+                textOption.text = string.Format(data.itemDesc, data.damages[level] * 100, data.counts[level]);
+                break;
+            case ItemData.ItemType.Mangto:
+            case ItemData.ItemType.Wings:
+                textOption.text = string.Format(data.itemDesc, data.damages[level] * 100);
+                break;
+            default:
+                textOption.text = string.Format(data.itemDesc);
+                break;
+        }
+    } 
 
     public void OnClick()
     {
