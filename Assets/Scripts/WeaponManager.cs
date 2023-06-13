@@ -37,10 +37,10 @@ public class WeaponManager : MonoBehaviour
 				break;
 		}
 
-		if (Input.GetButtonDown("Jump"))
-		{
-			LevelUp(5, 1);
-		}
+		//if (Input.GetButtonDown("Jump"))
+	//	{
+			//LevelUp(5, 1);
+		//}
    }
 
    public void LevelUp(float damage, int count)

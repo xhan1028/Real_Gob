@@ -29,10 +29,11 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
-    void Start()
+    public void GameStart()
     {
         health = maxHealth;
         stateUp.Choice(0);
+        isLive = true;
     }
 
     void Update()
@@ -111,11 +112,11 @@ public class GameManager : MonoBehaviour
 
     public void ReStart()
     {
-        SceneManager.LoadScene("Slayer");
+        SceneManager.LoadScene(2);
     }
 
     public void BackMenu()
     {
-        SceneManager.LoadScene("Title");
+        SceneManager.LoadScene(0);
     }
 }
