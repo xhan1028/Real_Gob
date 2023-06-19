@@ -38,8 +38,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (!isLive)
-            return;
+       // if (!isLive)
+         //   return;
 
         gameTime += Time.deltaTime;
 
@@ -52,8 +52,8 @@ public class GameManager : MonoBehaviour
 
     public void GetExp()
     {
-        if (!isLive)
-            return;
+      //  if (!isLive)
+          //  return;
 
          exp++;
 
@@ -112,7 +112,7 @@ public class GameManager : MonoBehaviour
 
     public void ReStart()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Slayer_1");
     }
 
     public void BackMenu()

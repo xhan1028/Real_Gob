@@ -65,7 +65,7 @@ public class Chr_Move : MonoBehaviour
                 transform.GetChild(index).gameObject.SetActive(false);
             }
 
-            anim.SetTrigger("Dead");
+           // anim.SetTrigger("Dead");
             GameManager.instance.GameOver();
         }
     }
