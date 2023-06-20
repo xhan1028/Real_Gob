@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Slayer.unity
     guid: 80350ace9e0fc654f93e11411248b154
   - enabled: 1
-    path: Assets/Scenes/Slayer_1.unity
+    path: Assets/Scenes/Slayer.unity
     guid: 3058cf99e3215304fb18a61b95e8087b
   - enabled: 1
     path: Assets/Scenes/RunAway.unity
