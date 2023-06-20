@@ -6,21 +6,21 @@ public class Boss_Option : MonoBehaviour
 {
     public Animator animator;
 
-    public int maxHealth = 500;
-    int currentHealth;
+    public int health = 500;
+  //  int currentHealth;
 
-    void Start()
-    {
-        currentHealth = maxHealth;
-    }
+    //void Start()
+    //{
+        //currentHealth = maxHealth;
+   // }
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
+        health -= damage;
 
         animator.SetTrigger("Hurt");
 
-        if(currentHealth <= 0)
+        if(health <= 0)
         {
             Die();
         }

@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Boss_Num_1.unity
     guid: 2906108d5ddd4bf4cba109a0e0af8648
+  - enabled: 1
+    path: Assets/Scenes/Player_DIe.unity
+    guid: 25893a1e04f89bb448f9e39477820b72
+  - enabled: 1
+    path: Assets/Scenes/Load_NightMare.unity
+    guid: 275d7c9daeaa8a746aa72c2e89da7742
   m_configObjects: {}
