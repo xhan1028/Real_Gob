@@ -15,16 +15,13 @@ public class WeaponManager : MonoBehaviour
 
    void Awake()
    {
-		  chr_move = GetComponentInParent<Chr_Move>();
+		  chr_move = GameManager.instance.chr_move;
    }
-
-   void Start()
-   {
-		  Init();
-   }
-
    void Update()
    {
+		if (!GameManager.instance.isLive)
+            return;
+
 		switch (id)
 		{
 			case 0:
@@ -40,10 +37,10 @@ public class WeaponManager : MonoBehaviour
 				break;
 		}
 
-		if (Input.GetButtonDown("Jump"))
-		{
-			LevelUp(5, 1);
-		}
+		//if (Input.GetButtonDown("Jump"))
+	//	{
+			//LevelUp(5, 1);
+		//}
    }
 
    public void LevelUp(float damage, int count)
@@ -55,8 +52,25 @@ public class WeaponManager : MonoBehaviour
 			 zizeung();
    }
 
-   public void Init()
+   public void Init(ItemData data)
    {
+		name = "Weapon " + data.itemId;
+		transform.parent = chr_move.transform;
+		transform.localPosition = Vector3.zero;
+
+		id = data.itemId;
+		damage = data.baseDamage;
+		count = data.baseCount;
+
+		for (int index=0; index < GameManager.instance.pool.prefabs.Length; index++)
+		{
+			if (data.projectile == GameManager.instance.pool.prefabs[index])
+			{
+				prefabId = index;
+				break;
+			}
+		}
+
 		switch (id)
 		{
 			case 0:

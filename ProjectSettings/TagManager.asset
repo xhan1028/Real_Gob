@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Swrod
   - Sword
+  - fff
   layers:
   - Default
   - TransparentFX
