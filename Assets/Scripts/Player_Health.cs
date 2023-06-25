@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player_Health : MonoBehaviour
 {
+//	Image HealthBar;
     public int chr_health = 100;
+	//chr_health health;
 
     public void TakeDamage(int damage)
     {
@@ -18,6 +21,16 @@ public class Player_Health : MonoBehaviour
 			Die();
 		}
     }
+//
+//	void Start()
+  // {
+ // //  //   HealthBar = GetComponent<Image>();
+   // }
+
+//	void Update()
+	//{
+	//	HealthBar.fillAmount = chr_health;
+	//}
 
     void Die()
     {

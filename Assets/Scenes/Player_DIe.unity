@@ -618,7 +618,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1144366566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48d86d3085cbb7c439e23db6e38c4ea4, type: 3}
+  m_Script: {fileID: 11500000, guid: 507586c4ab360be44ba55b0569b46b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1566344508
@@ -706,8 +706,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1144366568}
-        m_TargetAssemblyTypeName: NightMare_Load, Assembly-CSharp
-        m_MethodName: backtitle
+        m_TargetAssemblyTypeName: Choice_TOol, Assembly-CSharp
+        m_MethodName: Start_Slayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
